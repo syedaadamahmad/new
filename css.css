@@ -1,0 +1,216 @@
+:root {
+  font-family: monospace, serif;
+  scroll-behavior: smooth;
+  --highlight: yellow;
+  --background: white;
+  --gray: rgba(128, 128, 128, 0.283);
+  --black: rgb(43, 43, 43);
+  padding:0;
+}
+body.dark-theme{
+  background-color: rgb(18, 18, 18);
+  color: green;
+  --black: green;
+  --highlight: rgb(52, 52, 52);
+}
+body.dark-theme footer, span{
+  background-color: green;
+}
+.checkbox {
+  display: none;
+}
+.switch {
+  background-color: var(--gray);
+  border: 3px solid var(--black);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  /* Scale the size to your need */
+  transform: scale(0.7);
+}
+.switch .ball {
+  background-color: var(--black);
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  height: 24px;
+  width: 24px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+.checkbox:checked + .switch .ball {
+  transform: translateX(24px);
+}
+.fa-moon {
+  color: green;
+}
+.fa-sun {
+  color: green;
+}
+.header-table {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--black);
+  height: 100%;
+  width: 100%;
+}
+.header-table img {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  min-width: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 2px var(--black) solid;
+}
+.header-table img:hover {
+  border: 2px var(--highlight) solid;
+  box-shadow: 2px 0px 20px 1px var(--highlight);
+  transition: 200ms ease-in-out;
+  color: var(--black);
+}
+.introduction {
+  display: inherit;
+  background-color: var(--gray);
+  color: var(--black);
+}
+.navbar {
+  display: block;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: var(--gray);
+  filter: blur(40px, 40px);
+  margin: 0 auto;
+  margin-top: 10px;
+  z-index: 99;
+  color:var(--black);
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+a:hover,
+a:focus {
+  background-color: var(--highlight);
+  transition: all 400ms ease;
+  text-decoration: underline;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  background-color: var(--highlight);
+  filter: blur(40px, 40px);
+  color: var(--black);
+}
+section {
+  height: 100vh;
+}
+#welcome {
+  background-image: url("assets/neko.gif");
+  background-repeat: no-repeat;
+  background-size: 30vmax;
+  background-position: center;
+}
+#welcome figure {
+  justify-content: center;
+  display: block;
+  text-align: center;
+  position: relative;
+  top:15%;
+  color: var(--black);
+}
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: baseline;
+  padding: 50px;
+  height: 100vh;
+}
+.skills figure i{
+  color: var(--black);
+}
+.skills figure i:hover{
+  color: var(--highlight);
+}
+.rect{
+    margin: 0 auto;
+    max-height: 300px;
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top:40%;
+  align-content: center;
+  justify-content: center;
+  align-items: baseline;
+}
+.rect img{
+    z-index:-1;
+}
+.rect img:hover {
+    z-index:-1;
+    border-bottom: 2px solid var(--highlight);
+    transition: all 200ms ease;
+    transform:scale3d(1.1, 1.1, 1.1);
+    box-shadow: 0px 5px 20px 2px var(--highlight);
+}
+.about ul li{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  text-align: center;
+  justify-content: space-around;
+}
+.about ul li a:hover{
+color: yellow;
+transform: scale(1.1,1.1);
+background-color: transparent;
+box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, yellow 0px 0px 20px, yellow 0px 0px 30px, yellow 0px 0px 40px, yellow 0px 0px 50px, yellow 0px 0px 75px;
+}
+footer {
+  height: 20vh;
+  display: block;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: var(--black);
+  margin-top: 30px;
+}
+footer a {
+  color: white;
+  background-size: fit-content;
+  height: fit-content;
+}
+footer a:hover,
+a:focus {
+  background-color: var(--highlight);
+  color: var(--black);
+}
+span a {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: var(--highlight);
+  background-color: var(--black);
+}
+span a:hover,
+a:focus {
+  background-color: var(--highlight);
+  color: var(--black);
+}
